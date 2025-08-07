@@ -7,6 +7,6 @@ app.get('/', (_req, res) => {
   res.send('Integración continua con GitHub Actions funcionando!');
 });
 
-app.listen(port, () => {
-  console.log(`Servidor escuchando en el puerto ${PORT}`);
+app.listen(PORT, () => {
+  console.log(`Servidor ejecutándose en el puerto ${PORT}`);
 });
