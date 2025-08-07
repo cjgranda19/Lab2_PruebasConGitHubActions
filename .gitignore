@@ -1,0 +1,13 @@
+#Para un proyecto en Node.js
+# Ignorar archivos de entorno
+.env
+# Ignorar el node_modules
+node_modules/
+# Ignorar archivos de log
+*.log
+# coverage de pruebas
+coverage/
+# data storage
+.DS_Store
+# npm debug log
+npm-debug.log*
