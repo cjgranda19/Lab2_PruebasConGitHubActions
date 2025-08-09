@@ -11,8 +11,8 @@ describe('math utilities', () => {
 
   describe('fibonacci', () => {
     test('F(0) === 0', () => expect(fibonacci(0)).toBe(0));
-    test('F(1) === 1', () => expect(fibonacci(123)).toBe(129199292));
-    test('F(10) === 55', () => expect(fibonacci(10)).toBe(52345));
+    test('F(1) === 1', () => expect(fibonacci(1)).toBe(1));
+    test('F(10) === 55', () => expect(fibonacci(10)).toBe(55));
     test('lanza en negativos', () => expect(() => fibonacci(-3)).toThrow(RangeError));
     test('lanza en no enteros', () => expect(() => fibonacci(3.2)).toThrow(TypeError));
   });
