@@ -1,11 +1,11 @@
-// math.js - utilidades matemáticas con validación (ESM)
+// math.js
 function assertInteger(n, name = 'n') {
   if (typeof n !== 'number' || !Number.isFinite(n) || !Number.isInteger(n)) {
     throw new TypeError(`${name} must be a finite integer`);
   }
 }
 
-export function factorial(n) {
+function factorial(n) {
   assertInteger(n, 'n');
   if (n < 0) throw new RangeError('n must be >= 0');
   if (n === 0) return 1;
@@ -14,7 +14,7 @@ export function factorial(n) {
   return res;
 }
 
-export function fibonacci(n) {
+function fibonacci(n) {
   assertInteger(n, 'n');
   if (n < 0) throw new RangeError('n must be >= 0');
   if (n === 0) return 0;
@@ -24,4 +24,4 @@ export function fibonacci(n) {
   return b;
 }
 
-export default { factorial, fibonacci };
+module.exports = { factorial, fibonacci };

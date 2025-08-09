@@ -1,5 +1,5 @@
-// math.test.js - pruebas con Jest para math.js (ESM)
-import { factorial, fibonacci } from './math.js';
+// math.test.js
+const { factorial, fibonacci } = require('./math');
 
 describe('math utilities', () => {
   describe('factorial', () => {
