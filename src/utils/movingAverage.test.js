@@ -1,4 +1,4 @@
-const { movingAverage } = require('../src/utils/movingAverage');
+const { movingAverage } = require('./movingAverage');
 
 describe('movingAverage', () => {
 test('([10,20,30,40], 2) → [15.00, 25.00, 35.00]', () => {
