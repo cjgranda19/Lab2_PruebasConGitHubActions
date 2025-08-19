@@ -1,0 +1,31 @@
+body{
+    font-family: sans-serif,
+}
+
+h1{
+    font-size: 2em;
+    color: #040404;
+}
+
+header{
+    background-color: #0d4b89;
+    padding: 20px;
+    text-align: center;
+}
+
+#Titulo{
+    font-size: 2em;
+    color: #ffffff;
+}
+
+main{
+    padding: 20px;
+    background-color: #fbe6cf;
+}
+
+footer{
+    background-color: #0d1115;
+    padding: 10px;
+    text-align: center;
+    color: white;
+}
