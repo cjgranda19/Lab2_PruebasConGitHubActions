@@ -1,33 +1,29 @@
-name: CI/CD workflow
+name: CI
 
-#trigers, para desencadenar el resto de operaciones
 on:
-  push:
-    branches: [main]
   pull_request:
-    branches: [main]
+    branches: [ "main" ]
+  push:
+    branches: [ "main" ]
 
 jobs:
-  build-and-test:
+  ci:
     runs-on: ubuntu-latest
     steps:
-      - name: Clonar repositorio
+      - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Configurar Node.js
+      - name: Use Node
         uses: actions/setup-node@v4
         with:
           node-version: '20'
+          cache: 'npm'
 
-      - name: Instalar dependencias
-        run: npm install
+      - name: Install
+        run: npm ci
 
-      - name: Lint del código
+      - name: Lint
         run: npm run lint
 
-      - name: Ejecutar pruebas
+      - name: Test with coverage
         run: npm test
-
-      - name: Simular despliegue
-        run: |
-          echo "Despliegue con Math: La aplicación pasó lint y pruebas exitosamente"
